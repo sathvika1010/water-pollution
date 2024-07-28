@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Water Pollution</title>
+    <style>
+        body {
+            background-color: #e0f7fa; /* Light blue background for the entire page */
+            margin: 0;
+            font-family: Arial, sans-serif; /* Font for the page */
+        }
+
+        .header {
+            font-size: 60px;
+            text-align: center;
+            background-color: #0000FF; /* Blue background for the header */
+            color: white; /* White text for contrast */
+            padding: 20px 0; /* Padding for some space around the text */
+        }
+
+        .faq {
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            background-color: #ffffff; /* White background for sections */
+            border-radius: 8px; /* Rounded corners for sections */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a lifted effect */
+        }
+
+        h2, h3 {
+            color: #000000; /* Black color for headings */
+        }
+
+        .faq h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .faq h3 {
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer; /* Change cursor to pointer to indicate clickability */
+            color: #007bff; /* Link color */
+        }
+
+        .faq h3:hover {
+            text-decoration: underline; /* Add underline on hover for better visual indication */
+        }
+
+        .faq p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .faq p.hidden {
+            display: none; /* Hide answers by default */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Frequently Asked Questions (FAQs)</h1>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+
+        <h3 id="faq1" onclick="scrollToAnswer('answer1')">1. What is water pollution?</h3>
+        <p id="answer1" class="hidden">
+            Water pollution occurs when harmful substances contaminate water bodies, including rivers, lakes, oceans, and groundwater. These substances can be chemicals, waste, or other pollutants that degrade water quality and harm aquatic life and human health.
+        </p>
+
+        <h3 id="faq2" onclick="scrollToAnswer('answer2')">2. What are the main sources of water pollution?</h3>
+        <p id="answer2" class="hidden">
+            The primary sources of water pollution include industrial discharge, agricultural runoff (pesticides and fertilizers), untreated sewage, plastic waste, oil spills, and chemical spills. Each source contributes to contamination in different ways.
+        </p>
+
+        <h3 id="faq3" onclick="scrollToAnswer('answer3')">3. How does water pollution affect the environment?</h3>
+        <p id="answer3" class="hidden">
+            Water pollution disrupts aquatic ecosystems by harming fish, plants, and other wildlife. Pollutants can cause oxygen depletion, leading to dead zones where aquatic life cannot survive. It can also affect the health of ecosystems and biodiversity.
+        </p>
+
+        <h3 id="faq4" onclick="scrollToAnswer('answer4')">4. What are the health impacts of water pollution?</h3>
+        <p id="answer4" class="hidden">
+            Exposure to polluted water can lead to various health problems, including gastrointestinal diseases, respiratory issues, and skin infections. Long-term exposure to certain pollutants can result in chronic conditions like cancer, neurological disorders, and developmental issues.
+        </p>
+
+        <h3 id="faq5" onclick="scrollToAnswer('answer5')">5. How can individuals help prevent water pollution?</h3>
+        <p id="answer5" class="hidden">
+            Individuals can reduce water pollution by practicing responsible waste disposal, reducing plastic use, conserving water, avoiding the use of harmful chemicals, and participating in local clean-up events. Additionally, supporting and advocating for policies aimed at protecting water resources can make a significant impact.
+        </p>
+
+        <h3 id="faq6" onclick="scrollToAnswer('answer6')">6. What are the common methods for treating water pollution?</h3>
+        <p id="answer6" class="hidden">
+            Common methods for treating water pollution include mechanical filtration, biological treatment (such as using microorganisms to break down pollutants), chemical treatment (such as adding disinfectants), and advanced technologies like reverse osmosis and activated carbon filtration.
+        </p>
+
+        <h3 id="faq7" onclick="scrollToAnswer('answer7')">7. How does sewage treatment work?</h3>
+        <p id="answer7" class="hidden">
+            Sewage treatment involves several stages: primary treatment (removing large solids and debris), secondary treatment (biological processes to break down organic matter), and tertiary treatment (further purification to remove remaining contaminants). The treated water is then released or further processed for safe use.
+        </p>
+
+        <h3 id="faq8" onclick="scrollToAnswer('answer8')">8. What are some recent developments in water pollution control?</h3>
+        <p id="answer8" class="hidden">
+            Recent developments in water pollution control include the adoption of stricter regulations for industrial discharges, advancements in water treatment technologies, and increased public awareness campaigns. There are also initiatives to restore polluted water bodies and improve waste management practices.
+        </p>
+
+        <h3 id="faq9" onclick="scrollToAnswer('answer9')">9. Why is it important to protect our water resources?</h3>
+        <p id="answer9" class="hidden">
+            Protecting water resources is crucial because clean water is essential for drinking, agriculture, and maintaining healthy ecosystems. Polluted water can have severe consequences for both human health and the environment, making conservation and pollution control critical for sustainable living.
+        </p>
+
+        <h3 id="faq10" onclick="scrollToAnswer('answer10')">10. What role do governments play in controlling water pollution?</h3>
+        <p id="answer10" class="hidden">
+            Governments play a key role in controlling water pollution through legislation, regulation, and enforcement. They establish water quality standards, monitor pollution levels, and implement policies and programs to reduce pollution from various sources. They also work with industries, communities, and organizations to address and mitigate water pollution.
+        </p>
+    </section>
+
+    <script>
+        function scrollToAnswer(answerId) {
+            const answer = document.getElementById(answerId);
+            const isHidden = answer.classList.contains('hidden');
+
+            // Toggle visibility
+            document.querySelectorAll('.faq p').forEach(p => p.classList.add('hidden'));
+            if (isHidden) {
+                answer.classList.remove('hidden');
+                answer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                answer.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
